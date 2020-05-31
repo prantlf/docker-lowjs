@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat</title>
+  <link rel=icon href=favicon.png type=image/png>
+  <link rel=stylesheet href=index.css>
+</head>
+<body>
+  <div>
+    <h1 class=welcome>Chat</h1>
+    <p class=explain>Type your message and hit Enter or click on the Send button:</p>
+    <form onsubmit="return sendMessage()">
+      <input type=text id=messageSend>
+      <input type=submit value=Send>
+    </form>
+    <p class=explain>Previous massages:</p>
+    <div id=messages></div>
+  </div>
+  <script type=text/javascript src=index.js></script>
+</body>
+</html>

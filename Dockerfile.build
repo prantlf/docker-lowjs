@@ -1,0 +1,21 @@
+FROM alpine:latest as builder
+RUN apk add --no-cache autoconf automake cmake file g++ git libtool make npm python2 python3 && \
+	wget http://dl-cdn.alpinelinux.org/alpine/v3.10/main/x86_64/py2-yaml-5.1.1-r0.apk && \
+	apk add --allow-untrusted py2-yaml-5.1.1-r0.apk && \
+	cd /root && \
+	git clone --recurse-submodules https://github.com/neonious/lowjs.git && \
+	cd lowjs && \
+	make && \
+	strip bin/low && \
+	mkdir build && \
+	mv bin build/ && \
+	mv lib build/
+
+FROM alpine:latest
+LABEL maintainer="Ferdinand Prantl <prantlf@gmail.com>"
+RUN apk add --no-cache libstdc++
+COPY --from=builder /root/lowjs/build /usr/local/
+WORKDIR /root
+EXPOSE 80 443
+ENTRYPOINT ["/usr/local/bin/low"]
+CMD ["-h"]
