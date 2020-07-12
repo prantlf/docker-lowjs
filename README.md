@@ -14,8 +14,6 @@
 
 ```
 docker pull prantlf/lowjs
-# or
-docker pull prantlf/lowjs:latest
 ```
 
 ## Use
@@ -24,11 +22,13 @@ You can either create your own image based on this one, or you can use it direct
 
 For example, run a script from `hello.js` in the current directory:
 
-    docker run --rm -it -v ${PWD}:/root prantlf/lowjs hello.js
+    docker run --rm -it -v "${PWD}":/root \
+      prantlf/lowjs hello.js
 
 For example, start a web server using built-in networking modules from `server.js` in the current directory:
 
-    docker run --rm -it -v ${PWD}:/root -p 80:80 -p 443:443 prantlf/lowjs server.js
+    docker run --rm -it -v "${PWD}":/root -p 80:80 -p 443:443 \
+      prantlf/lowjs server.js
 
 ## Build, Test and Publish
 
