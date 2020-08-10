@@ -11,7 +11,7 @@ build ::
 	docker build -t lowjs .
 
 run ::
-	docker run --rm -t -i lowjs
+	docker run --rm -it lowjs
 
 tag ::
 	docker tag lowjs prantlf/lowjs:latest
