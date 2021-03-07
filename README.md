@@ -34,32 +34,19 @@ For example, start a web server using built-in networking modules from `server.j
 
 The local image is built as `lowjs` and pushed to the docker hub as `prantlf/lowjs:latest`.
 
-Remove an old local image:
-
+    # Remove an old local image:
     make clean
-
-Check the `Dockerfile`:
-
+    # Check the `Dockerfile`:
     make lint
-
-Build a new local image:
-
+    # Build a new local image:
     make build
-
-Enter an interactive shell inside the created image:
-
+    # Enter an interactive shell inside the created image:
     make run
-
-Tag the local image for pushing:
-
+    # Tag the local image for pushing:
     make tag
-
-Login to the docker hub:
-
+    # Login to the docker hub:
     make login
-
-Push the local image to the docker hub:
-
+    # Push the local image to the docker hub:
     make push
 
 ## License
