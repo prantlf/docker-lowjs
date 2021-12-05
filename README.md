@@ -51,7 +51,7 @@ The local image is built as `lowjs` and pushed to the docker hub as `prantlf/low
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2020-2021 Ferdinand Prantl
 
 Licensed under the MIT license.
 
