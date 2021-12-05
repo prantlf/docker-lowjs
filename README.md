@@ -6,6 +6,8 @@
 
 [This image] is supposed to run JavaScript applications written for [Low.js], which supports a subset of [Node.js] API with much less footprint. For example, Node.js 14.3.0 needs 120 MB and Low.js 1.5.1 needs 6 MB on the disk. The price is a [limited API] and a JavaScript engine without JIT ([Duktape]). This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Low.js] has to be updated from time to time by editing the Dockerfile and triggering a new build manually.
 
+If you have trouble pulling the image from the Docker's default hub.docker.com, try gitlab.com, where [this project] is primarily maintained: `registry.gitlab.com/prantlf/docker-lowjs`.
+
 ## Tags
 
 - [`latest`]
@@ -57,6 +59,7 @@ Licensed under the MIT license.
 
 [Docker]: https://www.docker.com/
 [This image]: https://hub.docker.com/repository/docker/prantlf/lowjs
+[this project]: https://gitlab.com/prantlf/docker-lowjs#prantlflowjs
 [`latest`]: https://hub.docker.com/repository/docker/prantlf/lowjs/tags
 [Low.js]: https://www.neonious.com/lowjs/
 [Node.js]: https://nodejs.org/
