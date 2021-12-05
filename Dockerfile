@@ -1,6 +1,6 @@
 FROM alpine:latest as builder
 RUN cd /root && \
-	wget https://www.neonious.com/lowjs/downloads/lowjs-linux-x86_64-20210228_3479cc6.tar.gz && \
+	wget -q https://www.neonious.com/lowjs/downloads/lowjs-linux-x86_64-20210228_3479cc6.tar.gz && \
 	tar xf lowjs-linux-x86_64-20210228_3479cc6.tar.gz && \
 	rm lowjs-linux-x86_64-20210228_3479cc6/LICENSE lowjs-linux-x86_64-20210228_3479cc6/README.md && \
 	mkdir lowjs-linux-x86_64-20210228_3479cc6/root
